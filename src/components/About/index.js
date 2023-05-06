@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHtml5, faCss3Alt, faJsSquare, faReact, faNodeJs } from '@fortawesome/free-brands-svg-icons';
+import Loader from 'react-loaders'
 import './index.scss'
 
 const About = () => {
@@ -19,9 +20,10 @@ const About = () => {
     { name: 'Heroku', icon: faNodeJs },
     { name: 'Netlify', icon: faNodeJs },
     { name: 'Figma', icon: faNodeJs },
-    { name: 'Adobe XD', icon: faNodeJs },
-  ]
+    { name: 'Adobe XD', icon: faNodeJs }
+]
   return (
+    <>
     <div className="container about-page">
       <div className="text-zone">
         <h1>About me</h1>
@@ -56,6 +58,8 @@ const About = () => {
         </div>
       </div>
     </div>
+    <Loader type='ball-rotate' />
+    </>
   )
 }
 
