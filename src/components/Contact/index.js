@@ -11,11 +11,14 @@ const sendEmail = (e) => {
   e.preventDefault();
   emailjs
     .sendForm(
-      "gmail",
-      "template_1",
+      "service_geko8bk",
+      "template_ntubx15",
       form.current,
       "-3LXg3a6UqvysfV2P"
     )
+    // service_geko8bk -- your_service_id
+    // template_ntubx15 -- your_template_id
+
     .then(
       () => {
         alert("Message successfully sent!");
@@ -23,6 +26,7 @@ const sendEmail = (e) => {
       },
       () => {
         alert("Failed to send the message, please try again");
+        console.log("Error sending email: ", e);
       }
     );
 };
