@@ -9,6 +9,17 @@ const About = () => {
     { name: 'JavaScript', icon: faJsSquare },
     { name: 'React', icon: faReact },
     { name: 'Node.js', icon: faNodeJs },
+    { name: 'Express', icon: faNodeJs },
+    { name: 'MongoDB', icon: faNodeJs },
+    { name: 'Python', icon: faNodeJs },
+    { name: 'Django', icon: faNodeJs },
+    { name: 'PostgreSQL', icon: faNodeJs },
+    { name: 'Git', icon: faNodeJs },
+    { name: 'GitHub', icon: faNodeJs },
+    { name: 'Heroku', icon: faNodeJs },
+    { name: 'Netlify', icon: faNodeJs },
+    { name: 'Figma', icon: faNodeJs },
+    { name: 'Adobe XD', icon: faNodeJs },
   ]
   return (
     <div className="container about-page">
