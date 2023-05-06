@@ -5,7 +5,7 @@ import{ useRef } from 'react'
 import './index.scss'
 
 const Contact = () => {
-    const refForm = useRef()
+    const form = useRef()
 
 const sendEmail = (e) => {
   e.preventDefault();
@@ -37,7 +37,7 @@ const sendEmail = (e) => {
             other request or question, don't hesitate to use the form.
           </p>
           <div className="contact-form">
-            <form ref={refForm} onSubmit={sendEmail}>
+            <form ref={form} onSubmit={sendEmail}>
               <ul>
                 <li className="half">
                   <input type="text" placeholder="Name" required />
