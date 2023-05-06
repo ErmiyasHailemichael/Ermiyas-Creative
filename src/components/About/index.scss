@@ -1,0 +1,36 @@
+.about-page {
+    .text-zone {
+      // other styles here
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+  
+        li {
+          display: inline-block;
+          margin-right: 10px;
+          margin-bottom: 10px;
+          padding: 5px 10px;
+          border-radius: 5px;
+          background-color: #ffd700;
+          color: #000;
+          font-weight: bold;
+          font-size: 16px;
+          font-family: sans-serif;
+          text-transform: uppercase;
+  
+          &:hover {
+            background-color: #000;
+            color: #ffd700;
+            cursor: pointer;
+          }
+  
+          svg {
+            font-size: 20px;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+  
