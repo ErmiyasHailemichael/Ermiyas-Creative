@@ -1,7 +1,32 @@
 import Loader from 'react-loaders'
+import emailjs from '@emailjs/browser'
+import{ useRef } from 'react'
+
 import './index.scss'
 
 const Contact = () => {
+    const refForm = useRef()
+
+const sendEmail = (e) => {
+  e.preventDefault();
+  emailjs
+    .sendForm(
+      "gmail",
+      "template_1",
+      form.current,
+      "-3LXg3a6UqvysfV2P"
+    )
+    .then(
+      () => {
+        alert("Message successfully sent!");
+        window.location.reload(false);
+      },
+      () => {
+        alert("Failed to send the message, please try again");
+      }
+    );
+};
+
   return (
     <>
       <div className="container contact-page">
@@ -12,7 +37,7 @@ const Contact = () => {
             other request or question, don't hesitate to use the form.
           </p>
           <div className="contact-form">
-            <form>
+            <form ref={refForm} onSubmit={sendEmail}>
               <ul>
                 <li className="half">
                   <input type="text" placeholder="Name" required />
@@ -53,8 +78,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
-
-{
-  /* type='ThreeDots' */
-}
+export default Contact;
