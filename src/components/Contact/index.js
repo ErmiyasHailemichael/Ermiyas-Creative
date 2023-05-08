@@ -1,8 +1,8 @@
 import Loader from 'react-loaders'
 import emailjs from '@emailjs/browser'
 import{ useRef } from 'react'
-
 import './index.scss'
+import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
 
 const Contact = () => {
     const form = useRef()
@@ -75,6 +75,23 @@ const sendEmail = (e) => {
               </ul>
             </form>
           </div>
+        </div>
+        <div className='info-map'>
+          Ermiyas Hailemicheal, <br />
+          USA, <br />
+          13520 Linden Ave N, <br />
+          Seattle, WA 98133 <br />
+          <span>yemeerma11@gmail.com</span>
+        </div>
+        <div className='map-wrap'>
+          <MapContainer center={[44.96366, 19.61045]} zoom={13}>
+            <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
+            <Marker position={[44.96366, 19.61045]} >
+              <Popup>
+                Ermiyas Hailemicheal, located here.
+              </Popup>
+            </Marker>
+          </MapContainer>
         </div>
       </div>
       <Loader type="ball-rotate" />
